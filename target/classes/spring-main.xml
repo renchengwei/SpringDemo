@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/task
+        http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+
+	 <!-- 通过注释方式加入类（类必须在rcw路径下） -->
+<!-- 	<context:component-scan base-package="com.rencw"/> -->
+<!-- 	<bean id="test" class="com.rencw.service.Test1"></bean> -->
+	
+<!-- 	<bean class="com.rencw.service.factorymethod.DefaultServiceLocator" id="defaultServiceLocator"></bean> -->
+<!-- 	<bean class="com.rencw.service.factorymethod.ClientService" id="clientService"  -->
+<!-- 		factory-method="createInstance" factory-bean="defaultServiceLocator" -->
+<!-- 		lazy-init="true"></bean> -->
+		
+<!-- 	<bean id="singletonBean" class="com.rencw.service.scope.SingletonBean"> -->
+<!-- 		<property name="prototypeBean" ref="prototypeBean"></property> -->
+<!-- 	</bean> -->
+	
+<!-- 	<bean id="prototypeBean" class="com.rencw.service.scope.PrototypeBean" scope="prototype"> -->
+<!-- 		<aop:scoped-proxy/> -->
+<!-- 	</bean> -->
+	
+	<bean id="anotherExampleBean" class="com.rencw.service.lifecycle.AnotherExampleBean">
+	</bean>
+	
+	<bean class="com.rencw.service.lifecycle.InstantiationTracingBeanPostProcessor">
+	</bean>
+	
+	<bean class="com.rencw.service.lifecycle.BeanFactoryPostProcessorBean">
+	</bean>
+</beans>

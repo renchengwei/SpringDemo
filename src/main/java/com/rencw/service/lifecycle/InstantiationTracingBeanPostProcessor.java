@@ -2,7 +2,9 @@ package com.rencw.service.lifecycle;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.stereotype.Component;
 
+@Component
 public class InstantiationTracingBeanPostProcessor implements BeanPostProcessor {
 
 	@Override

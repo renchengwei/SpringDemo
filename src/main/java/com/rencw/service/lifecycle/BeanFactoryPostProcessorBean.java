@@ -4,7 +4,9 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BeanFactoryPostProcessorBean implements BeanFactoryPostProcessor,BeanNameAware {
 
 	private String beanName;
